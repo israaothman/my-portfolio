@@ -4,15 +4,26 @@ import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import Send from "@material-ui/icons/Send";
-import nodemailer from 'nodemailer';
-import axios from 'axios';
+// import Button from "@material-ui/core/Button";
+// import Send from "@material-ui/icons/Send";
+// import nodemailer from 'nodemailer';
+// import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
     background: "#233",
     height: "100vh",
+  },
+  subHeading: {
+    color: "#fff",
+    padding: 0,
+    textTransform: "uppercase",
+  },
+  body1: {
+    color: "tomato",
+  },
+  subtitle1: {
+    color: "tan",
   },
   heading: {
     color: "tomato",
@@ -64,39 +75,39 @@ const InputField = withStyles({
 
 const Contact = () => {
   const classes = useStyles();
-  const [obj, setObject] = useState({});
-  const [send,setSend] = useState(false);
+  // const [obj, setObject] = useState({});
+  // const [send,setSend] = useState(false);
   
-  const resetForm =()=>{
-    setObject({})
-  }
+  // const resetForm =()=>{
+  //   setObject({})
+  // }
 
-  setTimeout(()=>{
-    setSend(false)
-  },3000)
+  // setTimeout(()=>{
+  //   setSend(false)
+  // },3000)
 
 
-  const handleChange = e => {
-    setObject({ ...obj, [e.target.name]: e.target.value });
-  }
+  // const handleChange = e => {
+  //   setObject({ ...obj, [e.target.name]: e.target.value });
+  // }
 
-  const handelSend = ()=> {
-    console.log(obj)
+  // const handelSend = ()=> {
+  //   console.log(obj)
    
-    let data = {
-      name:obj.name,
-      email:obj.email,
-      msg:obj.msg
-    }
+  //   let data = {
+  //     name:obj.name,
+  //     email:obj.email,
+  //     msg:obj.msg
+  //   }
 
-    axios.post('/api/forma',data)
-    .then(res=>{
-       setSend(true);
-       resetForm();
-    }).catch('message not sent')
+  //   axios.post('/api/forma',data)
+  //   .then(res=>{
+  //      setSend(true);
+  //      resetForm();
+  //   }).catch('message not sent')
 
     
-  }
+  // }
 
   
 
@@ -104,7 +115,7 @@ const Contact = () => {
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
-          <Typography variant="h5" className={classes.heading}>
+          {/* <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...
           </Typography>
           <InputField onChange={handleChange}
@@ -131,7 +142,7 @@ const Contact = () => {
             rows={4}
             inputProps={{ className: classes.input }}
           />
-           <div>Message has been sent</div>
+           <div className={send?'appear':'hide'}>Message has been sent</div>
           <Button onClick={handelSend}
             variant="outlined"
             fullWidth={true}
@@ -139,7 +150,24 @@ const Contact = () => {
             className={classes.button}
           >
             Contact Me
-          </Button>
+          </Button> */}
+           <Typography variant="h5" className={classes.subHeading}>
+            Hire or Contact me...
+          </Typography>
+
+          <Typography variant="body1" align="center" className={classes.body1}>
+          Phone Number: 0785311513
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            className={classes.subtitle1}
+          >
+           <Typography variant="subtitle1" gutterBottom>
+              Email: israaothman11@gmail.com
+            </Typography>
+          </Typography>
+
         </Box>
       </Grid>
     </Box>

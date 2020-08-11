@@ -9,3 +9,10 @@ li {
 .lists{
     white-space: inherit;
 }
+
+.appear{
+    display: block;
+}
+.hide{
+    display: none;
+}
