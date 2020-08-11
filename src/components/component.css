@@ -1,0 +1,11 @@
+/* .lists{
+    display: inline-block;
+} */
+
+li {
+    text-align: left;
+}
+
+.lists{
+    white-space: inherit;
+}
