@@ -5,7 +5,7 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import Facebook from "@material-ui/icons/Facebook";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import {Link} from 'react-dom'
+// import {Link} from 'react-dom'
 
 const useStyles = makeStyles({
   bottomNavContainer: {
@@ -27,17 +27,14 @@ const useStyles = makeStyles({
 const Footer = () => {
   const classes = useStyles();
 
-  const openInNewTab = (url) =>{
-    let win = window.open(url, '_blank');
-    win.focus();
-  }
+
   return (
     <BottomNavigation className={classes.bottomNavContainer}>
-     <a href="https://www.facebook.com/israa.ayoub.18/" target="_blank" >  
+     <a href="https://www.facebook.com/israa.ayoub.18/" target="_blank"  rel="noopener noreferrer">  
      <BottomNavigationAction icon={<Facebook />} className={classes.root} /></a>
-     <a href="https://www.linkedin.com/in/israa-othman-b9a279158/" target="_blank" > 
+     <a href="https://www.linkedin.com/in/israa-othman-b9a279158/"  rel="noopener noreferrer" target="_blank" > 
      <BottomNavigationAction icon={<LinkedInIcon />} className={classes.root} /></a>
-     <a href="https://github.com/israaothman" target="_blank" > 
+     <a href="https://github.com/israaothman"  rel="noopener noreferrer" target="_blank" > 
      <BottomNavigationAction icon={<GitHubIcon />} className={classes.root} /></a>
     </BottomNavigation>
   );

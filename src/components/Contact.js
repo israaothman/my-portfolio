@@ -1,7 +1,7 @@
-import React, { useState} from 'react';
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import React  from 'react';
+import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import TextField from "@material-ui/core/TextField";
+// import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 // import Button from "@material-ui/core/Button";
@@ -50,28 +50,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const InputField = withStyles({
-  root: {
-    "& label.Mui-focused": {
-      color: "tomato",
-    },
-    "& label": {
-      color: "tan",
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "tan",
-      },
-      "&:hover fieldset": {
-        borderColor: "tan",
-      },
-      "&.Mui-focused fieldset": {
-        color: "#fff",
-        borderColor: "tan",
-      },
-    },
-  },
-})(TextField);
+// const InputField = withStyles({
+//   root: {
+//     "& label.Mui-focused": {
+//       color: "tomato",
+//     },
+//     "& label": {
+//       color: "tan",
+//     },
+//     "& .MuiOutlinedInput-root": {
+//       "& fieldset": {
+//         borderColor: "tan",
+//       },
+//       "&:hover fieldset": {
+//         borderColor: "tan",
+//       },
+//       "&.Mui-focused fieldset": {
+//         color: "#fff",
+//         borderColor: "tan",
+//       },
+//     },
+//   },
+// })(TextField);
 
 const Contact = () => {
   const classes = useStyles();

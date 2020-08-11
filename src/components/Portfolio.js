@@ -11,9 +11,9 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 import project1 from "../images/html-css-javascript-lg.jpg";
-import project2 from "../images/html-css-javascript.jpg";
+// import project2 from "../images/html-css-javascript.jpg";
 import project3 from "../images/javascript-fullstack.jpg";
-import project4 from "../images/mern-stack.jpg";
+// import project4 from "../images/mern-stack.jpg";
 import project5 from "../images/react-redux.jpg";
 import project6 from "../images/react.png";
 
@@ -102,11 +102,11 @@ const Portfolio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-              <a href={project.repo} target="_blank" >  
+              <a href={project.repo}  rel="noopener noreferrer" target="_blank"  >  
                 <Button  size="small" color="primary">
                   GitHub Repo
                 </Button></a>
-                <a href={project.live} target="_blank" >  
+                <a href={project.live}  rel="noopener noreferrer" target="_blank" >  
                 <Button size="small" color="primary">
                   Live Demo
                 </Button></a>
